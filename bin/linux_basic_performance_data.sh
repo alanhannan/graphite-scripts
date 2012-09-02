@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Gather Statistics from Linux Systems and
 # and send them to graphite.  Cron this to run

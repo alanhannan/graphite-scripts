@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Setup Environment and Declare functions for Graphite
 # enabled shell scripting
@@ -23,7 +23,7 @@
 
 #------------------------------------------------------------------------#
 # Carbon Server Configuration
-CARBON_HOST="graphite"
+CARBON_HOST="graphite1.arubathena.com"
 CARBON_PORT="2003"
 CARBON_BASE="tmp"
 
