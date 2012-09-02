@@ -25,7 +25,7 @@
 # Carbon Server Configuration
 CARBON_HOST="graphite1.arubathena.com"
 CARBON_PORT="2003"
-CARBON_BASE="tmp"
+CARBON_BASE="basic_perf"
 
 # Read in System Config
 if [ -f "/etc/sysconfig/carbon-endpoint" ]; then
