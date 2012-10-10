@@ -217,7 +217,7 @@ tcp_postgres=`/bin/netstat -na | /bin/egrep ":5432" | /bin/egrep ESTABLISHED | /
 tcp_redis=`/bin/netstat -na | /bin/egrep ":6379" | /bin/egrep ESTABLISHED | /usr/bin/wc -l`
 add_metric "tcp.ssl $tcp_ssl";
 add_metric "tcp.postgres $tcp_postgres";
-add_metric "tcp_redis $tcp_redis";
+add_metric "tcp.redis $tcp_redis";
 
 #------------------------------------------------------------------------#
 # SEND THE UPDATES TO CARBON
