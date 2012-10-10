@@ -209,6 +209,16 @@ done;
     set -- $line;
     add_metric "udp.packets.$3 $1";
 done;
+#
+#------------------------------------------------------------------------#
+# Grab # of established open connections
+tcp_ssl=`/bin/netstat -na | /bin/egrep ":443" | /bin/egrep ESTABLISHED | /usr/bin/wc -l`
+tcp_postgres=`/bin/netstat -na | /bin/egrep ":5432" | /bin/egrep ESTABLISHED | /usr/bin/wc -l`
+tcp_redis=`/bin/netstat -na | /bin/egrep ":6379" | /bin/egrep ESTABLISHED | /usr/bin/wc -l`
+add_metric "tcp.ssl $tcp_ssl";
+add_metric "tcp.postgres $tcp_postgres";
+add_metric "tcp_redis $tcp_redis";
+
 #------------------------------------------------------------------------#
 # SEND THE UPDATES TO CARBON
 send_to_carbon;
