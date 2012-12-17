@@ -26,7 +26,7 @@ fi;
 #------------------------------------------------------------------------#
 # Pre Check Routines
 # Hard Disk Monitoring
-disk_prefixes=( 'sd' 'hd' 'c0d' 'c1d' )
+disk_prefixes=( 'sd' 'hd' 'c0d' 'c1d' 'xvd' )
 declare -r disks_prefixes
 
 #------------------------------------------------------------------------#
