@@ -56,7 +56,9 @@ find "$CARBON_CACHE" -type f -user $(whoami) -mtime +1 -exec rm -f {} \; 2> /dev
 
 #------------------------------------------------------------------------#
 # Constants
-HOST=`hostname -s`
+#HOST=`hostname`
+HOST=`hostname | tr "\." "\n" | tac | tr "\\n" "."  | sed 's/\.$//g' | sed -e 's/com.arubathena/arubathena_com/g' `
+
 declare -r HOST
 RUN_TIME=`date +%s`
 declare -r RUN_TIME
