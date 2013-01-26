@@ -23,7 +23,7 @@
 
 #------------------------------------------------------------------------#
 # Carbon Server Configuration
-CARBON_HOST="graphite1-ext.arubathena.com"
+CARBON_HOST="graphite.arubathena.com"
 CARBON_PORT="2003"
 CARBON_BASE="basic_perf"
 
